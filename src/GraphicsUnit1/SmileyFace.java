@@ -33,8 +33,14 @@ public class SmileyFace extends Canvas
 
       window.setColor(Color.YELLOW);
       window.fillOval( 210, 100, 400, 400 );
-
-		//add more code here
+      
+      window.setColor(Color.BLACK);
+      window.fillOval(315, 200, 30, 24);
+      window.fillOval(485, 200, 30, 24);
+      
+      window.setColor(Color.RED);
+      window.drawArc(260, 275, 300, 150, 210, 120);
+      window.fillOval(405, 345, 10, 10);
 
 
    }
