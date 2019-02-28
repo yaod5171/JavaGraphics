@@ -36,6 +36,17 @@ public class BigHouse extends Canvas
 
       window.fillRect( 200, 200, 400, 400 );
       
+      
+      window.setColor(Color.LIGHT_GRAY);
+      window.fillOval(525, 45, 50, 50);
+      window.fillOval(520, 0, 65, 65);
+      window.fillOval(515, -45, 80, 80);
+      
+      window.setColor(Color.BLUE);
+      
+      window.fillRect(525, 75, 50, 100);
+      
+      
       window.setColor(Color.RED);
       
       window.fillPolygon(new int[]{100, 700, 400}, new int[]{200, 200, 50}, 3);
@@ -54,6 +65,10 @@ public class BigHouse extends Canvas
       window.fillRect(505, 405, 35, 35);
       window.fillArc(255, 330, 90, 90, 0, 180);
       
+      window.setColor(Color.ORANGE);
+      window.drawLine(300, 375, 300, 325);
+      window.drawLine(300, 375, 335, 340);
+      window.drawLine(300, 375, 265, 340);
 
    }
 }
