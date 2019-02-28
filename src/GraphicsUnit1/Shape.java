@@ -23,19 +23,24 @@ public class Shape
    public Shape(int x, int y, int wid, int ht, Color col)
    {
 		xPos = x;
-		//finish this constructor
+                yPos = y;
+                width = wid;
+                height = ht;
+                color = col;
    }
 
 
    public void draw(Graphics window)
    {
       window.setColor(color);
-      window.fillRect(xPos, yPos, width, height);
-
-      //draw whatever you want
-      //    ^
-      //  [ :: ]
-      //    ()
+      window.fillPolygon(new int[]{xPos, xPos+width, xPos+(width/2)}, 
+              new int[]{yPos+(int)(height*0.2), yPos+(int)(height*0.2), yPos}, 3);
+      window.fillRect(xPos+(int)(width*0.25), yPos+(int)(height*0.2), (int)(width*0.5), (int)(height*0.8));
+      
+      window.setColor(Color.GREEN);
+      window.fillPolygon(new int[]{xPos+(int)(width*0.25), xPos+(int)(width*0.75), xPos+(width/2)}, 
+              new int[]{yPos+(int)(height*0.15), yPos+(int)(height*0.15), yPos+(int)(height*0.05)}, 3);
+      window.fillRect(xPos+(int)(width*0.375), yPos+(int)(height*0.15), (int)(width*0.25), (int)(height*0.5));
 
    }
 
