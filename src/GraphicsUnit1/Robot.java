@@ -39,13 +39,17 @@ class Robot extends Canvas
 
       window.fillRect(325, 100, 150, 100);
       window.fillRect(315, 120, 170, 30);
+      window.fillRect(395, 80, 10, 20);
+      window.fillRect(375, 30, 50, 50);
+      
       
       window.setColor(Color.DARK_GRAY);
       window.fillOval(365, 125, 20, 20);
       window.fillOval(415, 125, 20, 20);
       window.fillRect(365, 165, 70, 15);
       
-      
+      window.setColor(Color.WHITE);
+      window.fillRect(385, 40, 30, 30);
 				
    }
 
@@ -59,6 +63,15 @@ class Robot extends Canvas
        window.setColor(Color.DARK_GRAY);
        window.fillRect(295, 350, 35, 35);
        window.fillRect(470, 350, 35, 35);
+       
+       window.setColor(Color.RED);
+       window.fillOval(395, 245, 10, 10);
+       
+       window.setColor(Color.GREEN);
+       window.fillOval(395, 275, 10, 10);
+       
+       window.setColor(Color.BLUE);
+       window.fillOval(395, 305, 10, 10);
        
        window.setColor(Color.WHITE);
        window.fillRect(305, 360, 15, 25);
