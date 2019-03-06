@@ -89,12 +89,36 @@ public class Shape
    //add in set and get methods for xPos, yPos, xSpeed, and ySpeed
    public int getX()
    {
-   	return 0;
+   	return xPos;
+   }
+   public int getY()
+   {
+   	return yPos;
+   }
+   public int getXSpeed()
+   {
+   	return xSpeed;
+   }
+   public int getYSpeed()
+   {
+   	return ySpeed;
    }
 
    public void setX( int x )
    {
-   	//add code here
+   	xPos = x;
+   }
+   public void setY( int y )
+   {
+   	yPos = y;
+   }
+   public void setXSpeed( int x )
+   {
+   	xSpeed = x;
+   }
+   public void setYSpeed( int y )
+   {
+   	ySpeed = y;
    }
 
    public String toString()
