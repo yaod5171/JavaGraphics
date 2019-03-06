@@ -44,18 +44,31 @@ public class Shape
     */
    public void draw(Graphics window)
    {
-      
+      window.setColor(Color.GRAY);
+      window.fillRect(xPos, yPos, width, height);
       window.setColor(color);
       
       window.fillArc(xPos-width/6, yPos, width/2, height*2/3, -90, 180);
       window.setColor(back);
       window.fillArc(xPos-width/12, yPos+height/12, width/3, height*1/2, -90, 180);
       window.setColor(color);
-      window.fillRect(xPos+width/12, yPos+height/10, width/12, height/2);
+      window.fillRect(xPos+width/12, yPos+height/6, width/12, height/2);
       
+      window.setColor(color);
+      window.fillPolygon(new int[]{xPos+width/12+1, xPos+width/3, xPos+width/2, xPos+width/2, xPos+width/3},
+                         new int[]{yPos, yPos, yPos+height/2, yPos+height*2/3, yPos+height/6}, 5);
+      window.fillPolygon(new int[]{xPos+width*3/4, xPos+width*2/3, xPos+width/2, xPos+width/2, xPos+width*3/4},
+                         new int[]{yPos, yPos, yPos+height/2, yPos+height*2/3, yPos+height/12}, 5);
+      
+      window.setColor(color);
+      window.fillArc(xPos+width/2, yPos, width/2, height*2/3, -90, 180);
+      window.setColor(back);
+      window.fillArc(xPos+width*7/12, yPos+height/12, width/3, height*1/2, -90, 180);
+      window.setColor(color);
+      window.fillRect(xPos+width*3/4, yPos+height/6, width/12, height/2);
+      
+      window.setColor(color);
       window.fillOval(xPos, yPos + height*2/3, width, height/3);
-      
-      
 
    }
 
