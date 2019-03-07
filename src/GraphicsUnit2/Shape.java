@@ -44,10 +44,10 @@ public class Shape
     */
    public void draw(Graphics window)
    {
-      window.setColor(Color.GRAY);
-      window.fillRect(xPos, yPos, width, height);
-      window.setColor(color);
+      //window.setColor(Color.GRAY);
+      //window.fillRect(xPos, yPos, width, height);
       
+      window.setColor(color);
       window.fillArc(xPos-width/6, yPos, width/2, height*2/3, -90, 180);
       window.setColor(back);
       window.fillArc(xPos-width/12, yPos+height/12, width/3, height*1/2, -90, 180);
