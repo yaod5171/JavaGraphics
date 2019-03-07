@@ -69,6 +69,8 @@ public class Shape
       
       window.setColor(color);
       window.fillOval(xPos, yPos + height*2/3, width, height/3);
+      window.setColor(back);
+      window.fillOval(xPos + width*2/5, yPos + height*4/5, width/5, height/15);
 
    }
 
@@ -83,7 +85,9 @@ public class Shape
 
    public void moveAndDraw(Graphics window)
    {
-    	//not needed yet
+    	xPos+=getXSpeed();
+        yPos+=getYSpeed();
+        draw(window);
    }
 
    //add in set and get methods for xPos, yPos, xSpeed, and ySpeed

@@ -23,11 +23,11 @@ public class MovingShapePanel extends JPanel implements Runnable
 
 	public MovingShapePanel()
 	{
-		setBackground(Color.WHITE);
+		setBackground(Color.BLACK);
 		setVisible(true);
 
 		//refer sh to a new Shape
-
+                 sh = new Shape(200, 200, 100, 75, Color.BLUE, getBackground(), 1, 1);
 
 		new Thread(this).start();
 	}
@@ -39,25 +39,30 @@ public class MovingShapePanel extends JPanel implements Runnable
 
 	public void paint(Graphics window)
 	{
-		window.setColor(Color.WHITE);
+		window.setColor(Color.BLACK);
 		window.fillRect(0,0,getWidth(), getHeight());
 		window.setColor(Color.BLUE);
 		window.drawRect(20,20,getWidth()-40,getHeight()-40);
 		window.setFont(new Font("TAHOMA",Font.BOLD,18));
-		window.drawString("CREATE YOUR OWN SHAPE!",40,40);
+		//window.drawString("CREATE YOUR OWN SHAPE!",40,40);
 
 		//tell sh to move and draw
-
+                sh.moveAndDraw(window);
+                
 		//this code handles the left and right walls
-		/* uncomment once Shape is built
-		 *
-		if(!(sh.getX()>=10 && sh.getX()<=730))
+
+		if(!(sh.getX()>=20 && sh.getX()<=getWidth()-120))
 		{
 			sh.setXSpeed(-sh.getXSpeed());
 		}
-		*/
+		
 
 		//add code to handle the top and bottom walls
+                
+                if(!(sh.getY()>=20 && sh.getY()<=getHeight()-95))
+		{
+			sh.setYSpeed(-sh.getYSpeed());
+		}
 
 	}
 
